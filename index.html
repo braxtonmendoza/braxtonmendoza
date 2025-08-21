@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <style>
+    :root { --max: 980px; --pad: 1.2rem; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; color:#111; }
+    header { padding: 4rem var(--pad) 2rem; background: #f6f6f6; }
+    main { max-width: var(--max); margin: 0 auto; }
+    h1 { margin: 0 0 .5rem; font-size: clamp(1.8rem, 4vw, 3rem); }
+    p.lead { margin: 0; color:#444; max-width: 60ch; }
+    nav { display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap; }
+    nav a { text-decoration:none; padding:.55rem .8rem; border:1px solid #ddd; border-radius:.6rem; }
+    section { padding: 2rem var(--pad); }
+    .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { border:1px solid #eee; border-radius: .8rem; padding:1rem; background:#fff; }
+    .card h3 { margin:.2rem 0 .5rem; }
+    .meta { font-size:.9rem; color:#666; margin:.25rem 0 .75rem; }
+    .btn { display:inline-block; padding:.5rem .75rem; border:1px solid #ddd; border-radius:.6rem; text-decoration:none; }
+    footer { padding: 2rem var(--pad); background:#fafafa; color:#555; }
+    a { color: inherit; }
+    .tag { font-size:.8rem; border:1px solid #ddd; border-radius:999px; padding:.15rem .5rem; margin-right:.35rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <main>
+      <h1>Your Name</h1>
+      <p class="lead">Engineer focused on embedded systems, IoT, and clean UX. I like turning scrappy prototypes into reliable products.</p>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="mailto:you@example.com">Contact</a>
+        <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a href="Your_Resume.pdf">Resume</a>
+      </nav>
+    </main>
+  </header>
+
+  <section id="projects">
+    <main>
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>IoT Energy Monitor</h3>
+          <div class="meta">Raspberry Pi Pico · MicroPython · Bluetooth</div>
+          <p>Low-cost monitor that logs appliance usage and syncs via HC-05. Cut manual logging from 30m/day to 2m/day.</p>
+          <p>
+            <span class="tag">MicroPython</span>
+            <span class="tag">BLE/Serial</span>
+            <span class="tag">Dashboards</span>
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/USERNAME/iot-energy-monitor">Code</a>
+            <a class="btn" href="demo.mp4">Demo</a>
+        </article>
+
+        <article class="card">
+          <h3>9-DoF Motion Tracker</h3>
+          <div class="meta">MPU9250 · Sensor Fusion · Kalman</div>
+          <p>Streams orientation to a web UI; includes calibration + visualizer.</p>
+          <p>
+            <span class="tag">C / Python</span>
+            <span class="tag">WebSerial</span>
+          </p>
+          <p>
+            <a class="btn" href="https://github.com/USERNAME/mpu9250-tracker">Code</a>
+            <a class="btn" href="live-demo/">Live</a>
+          </p>
+        </article>
+      </div>
+    </main>
+  </section>
+
+  <section id="about">
+    <main>
+      <h2>About</h2>
+      <p>I build reliable embedded systems and developer-friendly tooling. Recently: sensor fusion on MCU, OTA update pipeline, and BLE integrations.</p>
+    </main>
+  </section>
+
+  <footer>
+    <main>
+      <small>© <span id="y"></span> Your Name — <a href="mailto:you@example.com">you@example.com</a></small>
+    </main>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
