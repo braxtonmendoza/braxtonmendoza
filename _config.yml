@@ -1,6 +1,4 @@
 # _config.yml (at repo root)
-title: Braxton Mendoza
-description: Portfolio
+
 theme: jekyll-theme-slate
-url: "https://braxtonmendoza.github.io"
-baseurl: "/portfolio"
+
